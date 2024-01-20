@@ -24,12 +24,12 @@ public class PlayerMovement : MonoBehaviour
         direction = Input.GetAxis("Horizontal"); // -1 -> 1
         if(direction < 0)
         {
-            transform.localScale = Vector3.one;
+            transform.localScale = new Vector3(-1, 1, 1);
             animator.SetBool("run", true);
         }
         else if(direction > 0)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = Vector3.one;
             animator.SetBool("run", true);
         }
         else
